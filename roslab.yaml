@@ -1,0 +1,10 @@
+name: nanomap_ros
+
+distro: kinetic
+
+packages:
+  - libeigen3-dev
+  - ros-kinetic-cv-bridge
+  - ros-kinetic-image-transport
+  - liborocos-kdl-dev
+  - ros-kinetic-tf2-sensor-msgs
