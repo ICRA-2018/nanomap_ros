@@ -15,11 +15,12 @@ RUN apt-get update \
 RUN mkdir -p ${HOME}/catkin_ws/src/nanomap_ros
 COPY . ${HOME}/catkin_ws/src/nanomap_ros/.
 RUN cd ${HOME}/catkin_ws \
+ && mv src/nanomap_ros/README.ipynb .. \
  && apt-get update \
  && /bin/bash -c "source /opt/ros/kinetic/setup.bash && rosdep update && rosdep install --as-root apt:false --from-paths src --ignore-src -r -y" \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
- && /bin/bash -c "source /opt/ros/kinetic/setup.bash && catkin build"
+ && /bin/bash -c "source /opt/ros/kinetic/setup.bash && catkin_make"
 
 RUN echo "source ~/catkin_ws/devel/setup.bash" >> ${HOME}/.bashrc
 

@@ -2,6 +2,8 @@ name: nanomap_ros
 
 distro: kinetic
 
+build: catkin_make
+
 packages:
   - libeigen3-dev
   - ros-kinetic-cv-bridge
