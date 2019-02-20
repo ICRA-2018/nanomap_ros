@@ -70,12 +70,23 @@ COPY ./ros_entrypoint.sh /
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
 
+##################################### APT ######################################
+
+RUN apt-get update \
+ && apt-get install -yq --no-install-recommends \
+    libeigen3-dev \
+    ros-kinetic-cv-bridge \
+    ros-kinetic-image-transport \
+    liborocos-kdl-dev \
+    ros-kinetic-tf2-sensor-msgs \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
 ##################################### COPY #####################################
 
 COPY . ${HOME}
 
 ##################################### TAIL #####################################
-
 
 RUN chown -R ${NB_UID} ${HOME}
 

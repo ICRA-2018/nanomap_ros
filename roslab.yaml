@@ -4,13 +4,12 @@ base:
   ubuntu: 16.04
   ros: kinetic-ros-core
 
-distro: kinetic
-
 build: catkin_make
 
-packages:
+apt:
   - libeigen3-dev
   - ros-kinetic-cv-bridge
   - ros-kinetic-image-transport
   - liborocos-kdl-dev
   - ros-kinetic-tf2-sensor-msgs
+
