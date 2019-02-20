@@ -1,5 +1,9 @@
 name: nanomap_ros
 
+base:
+  ubuntu: 16.04
+  ros: kinetic-ros-core
+
 distro: kinetic
 
 build: catkin_make

@@ -1,5 +1,6 @@
+README.md
 .dockerignore
-Dockerfile
 roslab.yaml
-docker_build.sh
-docker_run.sh
+roslab.dockerfile
+roslab_build.sh
+roslab_run.sh
