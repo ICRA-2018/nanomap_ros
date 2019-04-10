@@ -1,4 +1,7 @@
 # NanoMap
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/icra2018/nanomap_ros.svg)](https://hub.docker.com/r/icra2018/nanomap_ros)
+<a href="#how-to-run-with-docker"><img src="https://img.shields.io/badge/Docker-instructions-brightgreen.svg"></a>
+
 ## Fast, Uncertainty-Aware Proximity Queries with Lazy Search of Local 3D Data
 
 NanoMap is an algorithm and data structure that enables uncertainty-aware proximity queries for planning.
@@ -109,3 +112,14 @@ A particularly useful debug print is in `NanoMapDebugPrintState()` in `nanomap.c
 ## Contact
 
 Contact <peteflo@csail.mit.edu> / [peteflorence.com](http://peteflorence.com) for more information. 
+
+# How to Run with Docker
+## Linux
+
+Tested on Ubuntu 16.04.6 with Docker 18.06.1-ce.
+
+1. Open a terminal and run the command:
+```
+docker run --rm -p 8888:8888 icra2018/nanomap_ros:latest
+```
+2. Run a web browser and open the link: [http://localhost:8888/lab/tree/README.ipynb](http://localhost:8888/lab/tree/README.ipynb)
